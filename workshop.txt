@@ -1,0 +1,41 @@
+Django: Framework web, open source, com objetivo de agilizar o desenvolvimento de plataformas web
+
+Usa a linguagem de programação python, recomendado o uso do python 3
+Tem uma comunidade bem ativa
+Da pra instalar django com pip do python
+
+Depois de tudo instalado:
+Comandos:
+1 - django-admin startproject mysite
+    - Vai criar a estrutura inicial do projeto: 
+        - manage.py: arquivo com instruções para interagir com o framework
+        - Arquivo com o nome do projeto importante para a aplicação
+            - settings.py : configuração
+            - urls.py: configuração das urls do projeto
+            - wsgi.py: configuração do servidor para colocar em produção
+2 - python manage.py runserver (inicia o servidor local)
+
+
+No Django é usado o conceito de app:
+    Um app é a aplicação web em si: ex: Calendário da Nitzsche. Os arquivos criados antes são as configurações para  que os apps funcionem
+
+Django segue a nomenclatura de MVC: 
+    Model: model
+    View: Template
+    Controller: View
+    Model-Template-View + Controller
+
+Comando:
+3 - python manage.py migrate 
+    - Ele instala os apps que configuramos. Cria também as tabelas necessárias no banco
+
+4 - python manage.py makemigrations <nome do app>
+    - Cria os arquivos necessários para as mudanças e alterações feitas: Cria um arquivo com detalhes do que será feito.
+
+5 - python manage.py sqlmigrate polls 0001 
+    - Lista o sql que será executado
+    - De acordo com o banco configurado
+
+Da pra testar o banco no shell:
+    https://docs.djangoproject.com/en/2.2/intro/tutorial02/
+
