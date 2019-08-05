@@ -43,4 +43,7 @@ Comando:
 
 Da pra testar o banco no shell:
     https://docs.djangoproject.com/en/2.2/intro/tutorial02/
+    
+tutorial usado :
+https://realpython.com/get-started-with-django-1/
 
