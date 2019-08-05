@@ -4,6 +4,11 @@ Usa a linguagem de programação python, recomendado o uso do python 3
 Tem uma comunidade bem ativa
 Da pra instalar django com pip do python
 
+AMBIENTE COM VIRTUALENV
+Acesso:
+    source <location>/workshop_django/bin/activate
+
+
 Depois de tudo instalado:
 Comandos:
 1 - django-admin startproject mysite

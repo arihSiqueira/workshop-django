@@ -3,9 +3,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
+from django.views.generic.edit import CreateView
 
 from .models import Choice, Question
 
+from django.urls import reverse_lazy
 
 
 class IndexView(generic.ListView):
@@ -26,6 +28,13 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
+class QuestionCreate(CreateView):
+    model = Question
+    fields = ['question_text', 'pub_date']
+    success_url = reverse_lazy('polls:index')
+
+
+
 # ...
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -44,3 +53,4 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
