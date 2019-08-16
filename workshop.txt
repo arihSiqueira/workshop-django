@@ -8,7 +8,6 @@ AMBIENTE COM VIRTUALENV
 Acesso:
     source <location>/workshop_django/bin/activate
 
-
 Depois de tudo instalado:
 Comandos:
 1 - django-admin startproject mysite
@@ -46,4 +45,17 @@ Da pra testar o banco no shell:
     
 tutorial usado :
 https://realpython.com/get-started-with-django-1/
+
+
+Clonando o projeto em outra maquina
+
+PARA O AMBIENTE EM LINUX, PRECISEI BAIXAR:
+sudo apt-get install libpq-dev
+sudo apt-get install python3-dev
+Depois deu certo :
+pip install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py createsuperuser
 
